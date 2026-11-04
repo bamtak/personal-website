@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kolawole Tajudeen</title>
+<meta name="description" content="Lead software engineer and founder. I take products from blank page to production: API, web, mobile and AI. Six live platforms, plus clinical AI for medical imaging.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230A2342'/%3E%3Cpath d='M10 32h12l4-12 8 24 4-12h16' fill='none' stroke='%23FFB84D' stroke-width='4'/%3E%3C/svg%3E">
+<link rel="canonical" href="https://tajudeenkolawole.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kolawole Tajudeen">
+<meta property="og:description" content="Lead software engineer and founder. I take products from blank page to production: API, web, mobile and AI. Six live platforms, plus clinical AI for medical imaging.">
+<meta property="og:url" content="https://tajudeenkolawole.com/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@bamtak_">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400..700&display=swap" rel="stylesheet">
+<style>
+
+/* Layout idea: an engineering drawing set. Blueprint title sheet, work drawn as a single-line diagram,
+   framed sheets with a title block. Drafting-white paper, navy ink, red-pencil accent; blueprint in dark mode. */
+:root {
+  --paper: #F8F8F4;
+  --panel: #FFFFFF;
+  --ink: #0B1F3A;
+  --muted: #4E607A;
+  --line: #C3CCD9;
+  --accent: #B3261E;
+  --accent-ink: #9A1F18;
+  --ok: #1B7F4B;
+  --grid: rgba(11, 31, 58, .06);
+  --display: 'Libre Caslon Text', 'Iowan Old Style', Georgia, serif;
+  --body: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0A2342; --panel: #0E2D52; --ink: #EAF2FF; --muted: #9DB6D6; --line: #2F5C8F;
+    --accent: #FFB84D; --accent-ink: #FFC978; --ok: #5FD39A; --grid: rgba(234, 242, 255, .07); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0A2342; --panel: #0E2D52; --ink: #EAF2FF; --muted: #9DB6D6; --line: #2F5C8F;
+  --accent: #FFB84D; --accent-ink: #FFC978; --ok: #5FD39A; --grid: rgba(234, 242, 255, .07); color-scheme: dark;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+.wrap { width: min(1160px, 100% - 2 * clamp(16px, 4vw, 40px)); margin-inline: auto; }
+.mono { font-family: var(--mono); font-size: .76rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; text-wrap: balance; }
+
+/* top bar */
+.top { border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 16px; flex-wrap: wrap; }
+.brand { font-family: var(--display); font-weight: 700; font-size: 1.05rem; text-decoration: none; letter-spacing: -0.01em; }
+.brand i { font-style: normal; color: var(--accent); }
+nav { display: flex; gap: 22px; flex-wrap: wrap; }
+nav a { font-family: var(--mono); font-size: .76rem; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; color: var(--muted); }
+nav a:hover { color: var(--accent-ink); }
+
+/* hero */
+.hero { padding-block: clamp(40px, 7vw, 88px) clamp(32px, 5vw, 56px); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
+.hero .mono.eyebrow { color: var(--accent-ink); margin-bottom: 18px; display: block; }
+.hero h1 { font-size: clamp(2.5rem, 6.2vw, 4.9rem); font-weight: 750; letter-spacing: -0.035em; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero .lede { margin-top: 26px; max-width: 58ch; font-size: 1.12rem; color: var(--muted); }
+.hero .lede b { color: var(--ink); font-weight: 600; }
+.cta { margin-top: 30px; display: flex; gap: 12px; flex-wrap: wrap; }
+.btn { font-family: var(--mono); font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; padding: 13px 18px; border: 1px solid var(--ink); border-radius: 3px; display: inline-flex; gap: 8px; align-items: center; }
+.btn.solid { background: var(--ink); color: var(--paper); }
+.btn:hover { border-color: var(--accent); color: var(--accent-ink); }
+.btn.solid:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+.readout { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; }
+.readout-head { display: flex; justify-content: space-between; padding: 11px 16px; border-bottom: 1px solid var(--line); }
+.zone { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; padding: 16px; border-bottom: 1px solid var(--line); }
+.zone:last-of-type { border-bottom: 0; }
+.zone .where { font-weight: 600; }
+.zone .clock { grid-row: span 2; grid-column: 2; font-family: var(--mono); font-size: 2rem; line-height: 1; font-variant-numeric: tabular-nums; align-self: center; letter-spacing: -0.02em; }
+.zone .sub { font-family: var(--mono); font-size: .72rem; color: var(--muted); letter-spacing: .04em; }
+.state { display: inline-flex; align-items: center; gap: 7px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--line); flex: none; }
+.dot.on { background: var(--ok); box-shadow: 0 0 0 3px color-mix(in srgb, var(--ok) 25%, transparent); }
+.readout-foot { padding: 12px 16px; border-top: 1px solid var(--line); font-size: .86rem; color: var(--muted); }
+
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: clamp(36px, 6vw, 64px); border-top: 1px solid var(--ink); }
+.stat { padding: 18px 18px 6px 0; }
+.stat + .stat { padding-left: 18px; border-left: 1px solid var(--line); }
+.stat b { display: block; font-family: var(--display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
+.stat span { display: block; margin-top: 8px; font-size: .88rem; color: var(--muted); line-height: 1.4; }
+
+/* sections */
+section { padding-block: clamp(44px, 7vw, 96px); border-top: 1px solid var(--line); }
+.sec-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 24px; margin-bottom: clamp(28px, 4vw, 48px); align-items: end; }
+.sec-head h2 { font-size: clamp(1.9rem, 4vw, 3rem); }
+.sec-head p { color: var(--muted); max-width: 60ch; }
+
+/* index table */
+.idx { width: 100%; border-collapse: collapse; }
+.idx th { text-align: left; font-family: var(--mono); font-weight: 400; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding: 0 12px 10px 0; border-bottom: 1px solid var(--ink); }
+.idx td { padding: 15px 12px 15px 0; border-bottom: 1px solid var(--line); vertical-align: baseline; }
+.idx td.id { font-family: var(--mono); font-size: .78rem; color: var(--muted); width: 64px; }
+.idx td.name { font-family: var(--display); font-weight: 650; font-size: 1.15rem; letter-spacing: -0.01em; }
+.idx td.name a { text-decoration: none; }
+.idx tr:hover td.name a { color: var(--accent-ink); }
+.idx td.dom { color: var(--muted); font-size: .94rem; }
+.idx td.site { font-family: var(--mono); font-size: .78rem; text-align: right; white-space: nowrap; }
+.idx td.site a { text-decoration: none; color: var(--accent-ink); }
+.pill { font-family: var(--mono); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; padding: 3px 9px; border: 1px solid var(--line); border-radius: 20px; color: var(--muted); white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; }
+.pill.live { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 45%, var(--line)); }
+.pill.live::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--ok); }
+
+/* spec blocks */
+.spec { padding-block: clamp(32px, 5vw, 56px); border-top: 1px solid var(--line); scroll-margin-top: 16px; }
+.spec:first-of-type { margin-top: clamp(40px, 6vw, 72px); border-top: 1px solid var(--ink); }
+.spec-head { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.spec-head .id { font-family: var(--mono); font-size: .8rem; color: var(--accent-ink); border: 1px solid var(--accent); padding: 2px 8px; border-radius: 3px; }
+.spec-head h3 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); }
+.spec-head .logo { margin-left: auto; height: 38px; width: auto; border-radius: 8px; }
+.tagline { margin-top: 12px; font-size: 1.15rem; color: var(--muted); max-width: 60ch; }
+.spec-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(24px, 4vw, 56px); margin-top: 28px; align-items: start; }
+.spec:nth-of-type(even) .spec-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
+.spec:nth-of-type(even) .spec-copy { order: 2; }
+.spec-copy p { max-width: 60ch; }
+.spec-copy ul { margin-top: 16px; list-style: none; display: grid; gap: 12px; max-width: 60ch; }
+.spec-copy li { padding-left: 22px; position: relative; font-size: .98rem; }
+.spec-copy li::before { content: ''; position: absolute; left: 0; top: .72em; width: 10px; height: 1px; background: var(--accent); }
+.spec-copy li b { font-weight: 600; }
+.facts { margin-top: 24px; border-top: 1px solid var(--line); max-width: 60ch; }
+.facts div { display: grid; grid-template-columns: 96px 1fr; gap: 12px; padding: 9px 0; border-bottom: 1px dotted var(--line); font-size: .92rem; }
+.facts dt { font-family: var(--mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.visit { display: inline-flex; margin-top: 20px; font-family: var(--mono); font-size: .8rem; letter-spacing: .04em; color: var(--accent-ink); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 2px; }
+
+figure.media { display: grid; gap: 10px; }
+figure.media .frame { border: 1px solid var(--line); background: var(--panel); border-radius: 6px; overflow: hidden; box-shadow: 0 1px 0 var(--line), 0 14px 30px -18px rgba(10, 20, 30, .35); }
+figure.media .phones { display: flex; justify-content: center; gap: 14px; padding: 22px; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; }
+figure.media .phones img { width: min(44%, 230px); border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 10px 24px -12px rgba(10, 20, 30, .45); }
+figure.media .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+figure.media .duo .frame img { aspect-ratio: 3 / 2; object-fit: cover; }
+figcaption { font-family: var(--mono); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.stage { position: relative; padding-bottom: 54px; }
+.stage .over { position: absolute; right: 14px; bottom: 0; display: flex; gap: 10px; width: 36%; }
+.stage .over img { width: 50%; border-radius: 10px; border: 1px solid var(--line); box-shadow: 0 12px 26px -10px rgba(10, 20, 30, .55); }
+
+.diagram { padding: 18px; }
+.diagram svg { width: 100%; height: auto; display: block; }
+.diagram .box { fill: var(--panel); stroke: var(--ink); stroke-width: 1.2; }
+.diagram .inner { fill: var(--paper); stroke: var(--line); stroke-width: 1; }
+.diagram .out { fill: none; stroke: var(--muted); stroke-width: 1; stroke-dasharray: 4 4; }
+.diagram text { font-family: var(--mono); font-size: 11px; fill: var(--ink); letter-spacing: .04em; }
+.diagram text.m { fill: var(--muted); }
+.diagram text.a { fill: var(--accent-ink); }
+.diagram .wire { stroke: var(--accent); stroke-width: 1.6; fill: none; }
+.diagram .wire.dash { stroke: var(--muted); stroke-width: 1.2; stroke-dasharray: 4 4; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 3vw, 40px); margin-top: 24px; }
+.two h4 { font-family: var(--display); font-size: 1.15rem; letter-spacing: -0.01em; margin-bottom: 8px; }
+.two p { font-size: .98rem; color: var(--muted); max-width: 52ch; }
+
+/* approach */
+.principles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--ink); }
+.pr { padding: 22px 28px 26px 0; border-bottom: 1px solid var(--line); }
+.pr:nth-child(even) { padding-left: 28px; padding-right: 0; border-left: 1px solid var(--line); }
+.pr h3 { font-size: 1.3rem; letter-spacing: -0.015em; margin: 6px 0 8px; }
+.pr p { color: var(--muted); font-size: .97rem; max-width: 46ch; }
+
+/* background */
+.bg-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); }
+.tl { border-top: 1px solid var(--ink); }
+.tl-row { display: grid; grid-template-columns: 150px 1fr; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.tl-row h3 { font-size: 1.12rem; letter-spacing: -0.01em; }
+.tl-row p { color: var(--muted); font-size: .95rem; margin-top: 4px; max-width: 56ch; }
+.side-h { font-family: var(--mono); font-size: .76rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-bottom: 10px; border-bottom: 1px solid var(--ink); }
+.side-block { margin-bottom: 34px; }
+.side-block ul { list-style: none; }
+.side-block li { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.side-block li b { display: block; font-family: var(--display); font-size: 1.05rem; letter-spacing: -0.01em; font-weight: 650; }
+.side-block li span { color: var(--muted); font-size: .92rem; }
+
+/* contact */
+.contact h2 { font-size: clamp(2rem, 5vw, 3.6rem); max-width: 18ch; }
+.contact p { margin-top: 16px; color: var(--muted); max-width: 56ch; }
+.links { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px; }
+.links a { font-family: var(--mono); font-size: .78rem; letter-spacing: .04em; text-decoration: none; padding: 10px 14px; border: 1px solid var(--line); border-radius: 3px; background: var(--panel); }
+.links a:hover { border-color: var(--accent); color: var(--accent-ink); }
+footer { border-top: 1px solid var(--line); padding-block: 26px 40px; }
+footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+@media (max-width: 880px) {
+  .hero-grid, .spec-grid, .spec:nth-of-type(even) .spec-grid, .bg-grid, .sec-head { grid-template-columns: minmax(0, 1fr); }
+  .spec:nth-of-type(even) .spec-copy { order: 0; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .stat:nth-child(3) { padding-left: 0; border-left: 0; }
+  .stat:nth-child(n+3) { border-top: 1px solid var(--line); margin-top: 12px; }
+  .principles { grid-template-columns: 1fr; }
+  .pr:nth-child(even) { padding-left: 0; border-left: 0; }
+  .idx .dom, .idx th.dom { display: none; }
+  .tl-row { grid-template-columns: 1fr; gap: 4px; }
+  .two { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  body { font-size: 16px; }
+  .idx td.site, .idx th.site { display: none; }
+  .idx td.id { width: 48px; }
+  .facts div { grid-template-columns: 78px 1fr; }
+  .stage .over { width: 44%; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+
+.view[hidden] { display: none; }
+.view { padding-block: 0; border-top: 0; }
+.top { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--paper) 94%, transparent); backdrop-filter: blur(6px); }
+.top .wrap { gap: 10px 28px; }
+.top-right { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.soc { display: flex; gap: 14px; }
+.soc a { font-family: var(--mono); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; color: var(--accent-ink); border-bottom: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); }
+.soc a:hover { border-bottom-color: var(--accent); }
+nav a[aria-current="page"] { color: var(--ink); border-bottom: 1px solid var(--accent); }
+.page-head { padding-block: clamp(36px, 6vw, 72px) clamp(20px, 3vw, 36px); }
+.page-head .mono { color: var(--accent-ink); }
+.page-head h1 { font-size: clamp(2.2rem, 5.4vw, 4rem); margin-top: 12px; max-width: 18ch; }
+.page-head p { margin-top: 18px; color: var(--muted); max-width: 62ch; font-size: 1.08rem; }
+.block { padding-block: clamp(28px, 4vw, 56px); border-top: 1px solid var(--line); }
+.block > .wrap > h2 { font-size: clamp(1.6rem, 3.4vw, 2.4rem); margin-bottom: 8px; }
+.block > .wrap > .sub { color: var(--muted); max-width: 62ch; margin-bottom: 26px; }
+.hero h1 { font-size: clamp(2.5rem, 6.2vw, 4.9rem); }
+.spec { border-top: 0 !important; margin-top: 0 !important; padding-top: 8px; }
+.spec h1 { font-size: clamp(1.9rem, 4vw, 3rem); }
+.back { display: inline-block; margin-top: 28px; font-family: var(--mono); font-size: .76rem; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; color: var(--muted); }
+.back:hover { color: var(--accent-ink); }
+.pn { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; border-top: 1px solid var(--ink); margin-top: 24px; padding-block: 22px 56px; }
+.pn a { text-decoration: none; display: grid; gap: 4px; }
+.pn a.r { text-align: right; }
+.pn b { font-family: var(--display); font-size: 1.25rem; letter-spacing: -0.01em; }
+.pn a:hover b { color: var(--accent-ink); }
+
+.fgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.fcard { display: grid; grid-template-rows: auto 1fr; text-decoration: none; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; transition: border-color .15s, transform .15s; }
+.fcard:hover { border-color: var(--accent); transform: translateY(-2px); }
+.fmedia { aspect-ratio: 16 / 10; background: var(--paper); border-bottom: 1px solid var(--line); overflow: hidden; display: grid; place-items: center; }
+.fmedia img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.fmedia.contain { background: #14110e; }
+.fmedia.contain img { object-fit: contain; }
+.fmedia.portrait { background: var(--panel); padding-top: 14px; }
+.fmedia.portrait img { width: auto; height: 100%; object-fit: contain; border-radius: 12px 12px 0 0; border: 1px solid var(--line); border-bottom: 0; }
+.fbody { padding: 16px 18px 18px; display: grid; gap: 6px; align-content: start; }
+.fbody h3 { font-size: 1.35rem; letter-spacing: -0.015em; }
+.fbody p { color: var(--muted); font-size: .94rem; }
+.fmeta { display: flex; align-items: center; gap: 10px; margin-top: 6px; }
+.fsite { font-family: var(--mono); font-size: .74rem; color: var(--accent-ink); }
+
+.cos { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+.co { display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px 8px 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); text-decoration: none; }
+.co:hover { border-color: var(--accent); }
+.co .m { width: 28px; height: 28px; border-radius: 5px; background: var(--ink); color: var(--paper); font-family: var(--mono); font-size: .68rem; display: grid; place-items: center; letter-spacing: 0; }
+.co b { font-family: var(--display); font-weight: 650; font-size: .98rem; letter-spacing: -0.01em; }
+.co span.y { font-family: var(--mono); font-size: .68rem; color: var(--muted); }
+
+.slinks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.slink { display: grid; gap: 6px; padding: 22px 24px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); text-decoration: none; position: relative; }
+.slink:hover { border-color: var(--accent); }
+.slink b { font-family: var(--display); font-size: 1.6rem; letter-spacing: -0.02em; font-weight: 700; }
+.slink .desc { color: var(--muted); font-size: .95rem; }
+.slink .go { margin-top: 8px; font-family: var(--mono); font-size: .76rem; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-ink); }
+
+.gantt { margin-top: 8px; }
+.g-row { display: grid; grid-template-columns: 168px 1fr; gap: 14px; align-items: center; padding: 5px 0; }
+.g-head { padding-bottom: 6px; }
+.g-name { font-size: .88rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.g-track { position: relative; height: 16px; }
+.g-head .g-track { height: 16px; }
+.g-track i { position: absolute; top: -6px; bottom: -6px; width: 1px; background: var(--line); }
+.g-head .g-track i { display: none; }
+.gt { position: absolute; top: 0; transform: translateX(-50%); font-family: var(--mono); font-size: .62rem; color: var(--muted); }
+.bar { position: absolute; top: 2px; height: 12px; border-radius: 2px; background: var(--ink); }
+.bar.cur { background: var(--accent); }
+
+.jobs { display: grid; gap: 0; border-top: 1px solid var(--ink); }
+.job { display: grid; grid-template-columns: 56px 1fr; gap: 20px; padding: 26px 0; border-bottom: 1px solid var(--line); }
+.mono-tile { width: 48px; height: 48px; border-radius: 8px; background: var(--ink); color: var(--paper); display: grid; place-items: center; font-family: var(--mono); font-size: .85rem; letter-spacing: .02em; }
+.job-head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.job-head h3 { font-size: 1.5rem; letter-spacing: -0.02em; }
+.role { margin-top: 4px; font-weight: 600; }
+.role .dates { font-family: var(--mono); font-size: .74rem; letter-spacing: .04em; color: var(--muted); font-weight: 400; margin-left: 10px; white-space: nowrap; }
+.blurb { color: var(--muted); font-size: .95rem; margin-top: 2px; }
+.job ul { list-style: none; margin-top: 12px; display: grid; gap: 8px; max-width: 70ch; }
+.job li { position: relative; padding-left: 20px; font-size: .96rem; }
+.job li::before { content: ''; position: absolute; left: 0; top: .78em; width: 9px; height: 1px; background: var(--accent); }
+.job .chips { margin-top: 14px; }
+a.inline { color: var(--accent-ink); text-decoration: none; border-bottom: 1px solid currentColor; }
+
+.fc { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.fc .card { padding: 20px 22px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); }
+.fc .card h3 { font-size: 1.25rem; margin-bottom: 6px; }
+.fc .card p { color: var(--muted); font-size: .94rem; }
+.fc .card .mono { display: block; margin-bottom: 10px; color: var(--accent-ink); }
+.oss { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+
+.foot-soc { display: flex; gap: 18px; flex-wrap: wrap; }
+.foot-soc a { font-family: var(--mono); font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; color: var(--muted); }
+.foot-soc a:hover { color: var(--accent-ink); }
+.principles .pr h3 { font-size: 1.3rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chips span { font-family: var(--mono); font-size: .72rem; letter-spacing: .02em; padding: 3px 9px; border: 1px solid var(--line); border-radius: 20px; background: var(--panel); color: var(--muted); }
+.job-body { min-width: 0; }
+.job { grid-template-columns: 56px minmax(0, 1fr); }
+.g-row { grid-template-columns: 190px 1fr; }
+
+@media (max-width: 880px) {
+  .fgrid, .fc { grid-template-columns: 1fr 1fr; }
+  .slinks, .oss { grid-template-columns: 1fr; }
+  .g-row { grid-template-columns: 118px 1fr; }
+  .g-name { font-size: .78rem; }
+  .job { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .gt:nth-child(even) { display: none; }
+}
+@media (max-width: 560px) {
+  .fgrid, .fc { grid-template-columns: 1fr; }
+  .top-right { width: 100%; justify-content: space-between; }
+  .role .dates { display: block; margin: 4px 0 0; }
+}
+
+
+/* ---------- type ---------- */
+body { font-size: 17.5px; line-height: 1.62; background-color: var(--paper);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px; padding: clamp(8px, 1.6vw, 18px); }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; letter-spacing: -0.012em; line-height: 1.1; }
+h3 { font-weight: 700; }
+.mono, nav a, .btn, .pill, figcaption { font-family: var(--mono); }
+.frame { border: 2px solid var(--ink); background: var(--paper); box-shadow: 0 0 0 5px var(--paper), 0 0 0 6px var(--line); position: relative; }
+.frame::before, .frame::after { content: ''; position: absolute; width: 14px; height: 14px; border: solid var(--accent); pointer-events: none; z-index: 5; }
+.frame::before { top: -9px; left: -9px; border-width: 2px 0 0 2px; }
+.frame::after { bottom: -9px; right: -9px; border-width: 0 2px 2px 0; }
+
+/* ---------- header ---------- */
+.top { border-bottom: 2px solid var(--ink); position: sticky; top: 0; z-index: 30; background: var(--paper); }
+.brand { font-family: var(--display); font-weight: 700; font-size: 1.2rem; letter-spacing: -0.01em; }
+.brand i { color: var(--accent); }
+nav a { letter-spacing: .08em; }
+.soc a { color: var(--accent-ink); }
+
+/* ---------- title sheet (blueprint, in both themes) ---------- */
+.hero { --paper: #0A2342; --panel: #0E2D52; --ink: #EAF2FF; --muted: #A9C0DE; --line: #2F5C8F; --accent: #FFB84D; --accent-ink: #FFC978; --ok: #5FD39A;
+  background-color: var(--paper); color: var(--ink);
+  background-image: linear-gradient(rgba(234,242,255,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(234,242,255,.07) 1px, transparent 1px),
+                    linear-gradient(rgba(234,242,255,.13) 1px, transparent 1px), linear-gradient(90deg, rgba(234,242,255,.13) 1px, transparent 1px);
+  background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
+  padding-block: clamp(36px, 6vw, 72px) 0; border-bottom: 2px solid #EAF2FF; }
+.hero .mono.eyebrow { color: var(--accent); letter-spacing: .14em; }
+.hero h1 { font-weight: 400; font-size: clamp(2.5rem, 5.6vw, 4.7rem); letter-spacing: -0.02em; line-height: 1.04; }
+.hero h1 em { font-style: italic; color: var(--ink); }
+.hero h1 .u { text-decoration: underline wavy var(--accent); text-decoration-thickness: 2px; text-underline-offset: 8px; text-decoration-skip-ink: none; }
+.hero .lede { font-size: 1.14rem; color: var(--muted); }
+.hero .lede b { color: var(--ink); font-weight: 600; }
+.hero .btn { border-color: var(--ink); color: var(--ink); }
+.hero .btn.solid { background: var(--ink); color: #0A2342; }
+.hero .btn:hover { border-color: var(--accent); color: var(--accent); }
+.hero .btn.solid:hover { background: var(--accent); color: #0A2342; }
+.readout { background: rgba(10, 35, 66, .85); border: 1px solid var(--ink); border-radius: 0; }
+.readout-head, .zone, .readout-foot { border-color: var(--line); }
+.zone .clock { font-family: var(--mono); font-weight: 400; }
+.hero .stats { border-top: 1px solid var(--line); margin-top: clamp(32px, 5vw, 56px); }
+.hero .stat { padding-bottom: 22px; }
+.hero .stat + .stat { border-left-color: var(--line); }
+.hero .stat b { font-family: var(--display); font-weight: 400; }
+.hero .stat span { color: var(--muted); }
+
+/* ---------- single-line diagram ---------- */
+.sld-wrap { padding-block: clamp(36px, 6vw, 72px) clamp(28px, 4vw, 48px); }
+.sld-wrap .sec-head { margin-bottom: 28px; }
+.sld { position: relative; display: grid; justify-items: center; }
+.sld-src { display: flex; align-items: center; gap: 14px; border: 2px solid var(--ink); background: var(--panel); padding: 12px 22px 12px 14px; }
+.sld-src svg { width: 38px; height: 38px; flex: none; }
+.sld-src svg * { fill: none; stroke: var(--ink); stroke-width: 2; }
+.sld-src b { display: block; font-family: var(--display); font-size: 1.3rem; line-height: 1.1; }
+.sld-src .mono { font-size: .68rem; }
+.sld-trunk { width: 4px; height: 30px; background: var(--ink); position: relative; }
+.sld-feeders { list-style: none; position: relative; width: 100%; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); margin: 0; padding: 0; }
+.sld-feeders::before { content: ''; position: absolute; top: 0; left: calc(100% / 14); right: calc(100% / 14); height: 4px; background: var(--ink); }
+.bus-label { position: absolute; top: 8px; left: 16px; white-space: nowrap; font-family: var(--mono); font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.fd { position: relative; padding: 56px 6px 0; }
+.fd::before { content: ''; position: absolute; top: 0; left: calc(50% - 1px); width: 2px; height: 56px; background: var(--ink); }
+.fd.client::before { background: repeating-linear-gradient(to bottom, var(--ink) 0 5px, transparent 5px 9px); }
+.fd .brk { position: absolute; top: 14px; left: 50%; width: 16px; height: 22px; transform: translateX(-50%); border: 2px solid var(--ink); background: var(--paper); }
+.fd .brk::after { content: ''; position: absolute; left: 50%; top: -3px; width: 2px; height: 24px; background: var(--ink); transform: translateX(-50%) rotate(28deg); }
+.fd.client .brk { border-style: dashed; }
+.fd a { display: grid; gap: 4px; height: 100%; padding: 12px 12px 14px; border: 1px solid var(--ink); background: var(--panel); text-decoration: none; align-content: start; transition: border-color .15s, background-color .15s, transform .15s; }
+.fd.client a { border-style: dashed; }
+.fd .ref { font-family: var(--mono); font-size: .68rem; letter-spacing: .06em; color: var(--muted); }
+.fd b { font-family: var(--display); font-size: 1.08rem; line-height: 1.15; font-weight: 700; }
+.fd .dom { font-size: .84rem; color: var(--muted); line-height: 1.35; }
+.fd .st { margin-top: 6px; font-family: var(--mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ok); display: flex; align-items: center; gap: 6px; }
+.fd.client .st { color: var(--muted); }
+.fd .st::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.fd.client .st::before { background: transparent; border: 1.5px solid currentColor; }
+.fd:hover::before, .fd:focus-within::before { background: repeating-linear-gradient(to bottom, var(--accent) 0 6px, transparent 6px 12px); animation: flow .6s linear infinite; }
+.fd:hover .brk, .fd:focus-within .brk { border-color: var(--accent); }
+.fd:hover .brk::after, .fd:focus-within .brk::after { background: var(--accent); transform: translateX(-50%) rotate(0deg); }
+.fd a:hover, .fd a:focus-visible { border-color: var(--accent); background: var(--paper); transform: translateY(2px); }
+@keyframes flow { to { background-position: 0 12px; } }
+.sld-legend { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 8px 28px; font-family: var(--mono); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.sld-legend span { display: inline-flex; align-items: center; gap: 10px; }
+.sld-legend i { width: 34px; height: 0; border-top: 2px solid var(--ink); display: inline-block; }
+.sld-legend i.d { border-top-style: dashed; }
+.sld-legend i.e { border-top-color: var(--accent); }
+
+/* ---------- sections ---------- */
+.block { border-top: 2px solid var(--ink); }
+.block > .wrap > h2, .sec-head h2 { font-weight: 400; }
+.sec-head h2, .page-head h1 { font-style: normal; }
+.page-head h1 { font-weight: 400; letter-spacing: -0.02em; max-width: 20ch; }
+.page-head .mono { color: var(--accent-ink); }
+.idx th { border-bottom: 2px solid var(--ink); }
+.idx td.name { font-family: var(--display); font-weight: 700; }
+.pill { border-radius: 0; }
+.stat b, .pn b, .slink b { font-weight: 400; font-family: var(--display); }
+.spec-head h1 { font-weight: 400; }
+.spec-head .id { border-radius: 0; border-width: 1.5px; }
+.tagline { font-style: italic; font-size: 1.2rem; }
+.btn { border-radius: 0; }
+.fc .card, .slink, .card { border-radius: 0; }
+.frame-fig, figure.media .frame, figure.media .phones { border-radius: 0; box-shadow: none; }
+figure.media .phones img { border-radius: 14px; }
+figure.media .frame { border: 1px solid var(--ink); padding: 0; position: relative; }
+figure.media .frame::after { content: ''; position: absolute; inset: -5px; border: 1px solid var(--line); pointer-events: none; }
+.view { counter-reset: fig; }
+figcaption { counter-increment: fig; letter-spacing: .06em; }
+figcaption::before { content: 'Fig. ' counter(fig) '  \00B7  '; color: var(--accent-ink); }
+.mono-tile { border-radius: 0; background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+.jobs, .tl, .principles { border-top-width: 2px; }
+.gantt .bar { border-radius: 0; }
+.bar.cur { background: var(--accent); }
+.job-head h3, .pr h3 { font-weight: 700; }
+.slinks .slink b, .fc .card h3 { font-weight: 700; }
+.soc a { border-bottom-color: var(--accent); }
+footer { border-top: 2px solid var(--ink); }
+
+/* ---------- title block ---------- */
+.tb-wrap { padding-bottom: 28px; padding-top: 12px; }
+.tblock { display: grid; grid-template-columns: minmax(0, 2.4fr) repeat(4, minmax(0, 1fr)); border: 2px solid var(--ink); background: var(--panel); margin-left: auto; max-width: 760px; }
+.tblock > div { padding: 8px 12px 9px; border-left: 1px solid var(--ink); display: grid; gap: 2px; align-content: start; }
+.tblock > div:first-child { border-left: 0; }
+.tblock .mono { font-size: .6rem; letter-spacing: .12em; color: var(--muted); }
+.tblock b { font-family: var(--display); font-size: .98rem; font-weight: 700; line-height: 1.2; }
+.tblock .live { color: var(--ok); }
+
+@media (max-width: 980px) {
+  .sld { justify-items: start; }
+  .sld-trunk { width: 4px; margin-left: 12px; height: 22px; }
+  .sld-feeders { grid-template-columns: minmax(0, 1fr); padding-left: 40px; }
+  .sld-feeders::before { left: 12px; right: auto; top: 0; bottom: 36px; width: 4px; height: auto; }
+  .bus-label { display: none; }
+  .fd { padding: 0 0 12px; }
+  .fd::before { left: -28px; top: 34px; width: 28px; height: 2px; }
+  .fd.client::before { background: repeating-linear-gradient(to right, var(--ink) 0 5px, transparent 5px 9px); }
+  .fd:hover::before, .fd:focus-within::before { background: repeating-linear-gradient(to right, var(--accent) 0 6px, transparent 6px 12px); animation: none; }
+  .fd .brk { top: 25px; left: -20px; width: 20px; height: 16px; transform: none; }
+  .fd .brk::after { left: 4px; top: 50%; width: 12px; height: 2px; transform: translateY(-50%) rotate(-28deg); }
+  .fd:hover .brk::after, .fd:focus-within .brk::after { transform: translateY(-50%) rotate(0deg); }
+  .tblock { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: none; }
+  .tblock > div:first-child { grid-column: 1 / -1; border-bottom: 1px solid var(--ink); }
+  .tblock > div:nth-child(2) { border-left: 0; }
+  .tblock > div:nth-child(n+4) { border-top: 1px solid var(--ink); }
+}
+@media (prefers-reduced-motion: reduce) { .fd:hover::before, .fd:focus-within::before { animation: none; } .fd a { transition: none; } }
+</style>
+</head>
+<body>
+<div class="frame">
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#home">Kolawole Tajudeen<i>.</i></a>
+    <div class="top-right">
+      <nav aria-label="Pages">
+        <a href="#home" data-nav="home">Home</a>
+        <a href="#work" data-nav="work">Work</a>
+        <a href="#experience" data-nav="experience">Experience</a>
+        <a href="#about" data-nav="about">About</a>
+        <a href="#contact" data-nav="contact">Contact</a>
+      </nav>
+      <div class="soc" aria-label="Profiles"><a href="https://www.linkedin.com/in/bamtak/">LinkedIn</a> <a href="https://github.com/bamtak">GitHub</a> <a href="https://x.com/bamtak_">X</a></div>
+    </div>
+  </div>
+</header>
+<main id="main">
+<section class="view" data-view="home" data-title="Kolawole Tajudeen">
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="mono eyebrow">Sheet 01 of 12 &middot; Title sheet</span>
+        <h1>Software for places where the network is the <span class="u"><em>least reliable</em></span> part.</h1>
+        <p class="lede">I take products from <b>blank page to production</b>: the API, the web and mobile apps, and the AI inside them. <b>Six of my own platforms are live today</b>, and at MLHealth360 I lead clinical AI for medical imaging. MSc in Machine Intelligence, founder of DeepIntel Ltd.</p>
+        <div class="cta">
+          <a class="btn solid" href="#work">See the products</a>
+          <a class="btn" href="#experience">Career and companies</a>
+        </div>
+      </div>
+      <aside class="readout" aria-label="Operating windows">
+        <div class="readout-head"><span class="mono">Operating windows</span><span class="mono">Local time</span></div>
+        <div class="zone"><span class="where">Lagos, Nigeria</span><span class="clock" id="clk-lag">--:--</span><span class="sub"><span class="state"><span class="dot" id="dot-lag"></span><span id="st-lag">checking</span></span> &middot; <span id="off-lag">UTC+1</span></span></div>
+        <div class="zone"><span class="where">British Columbia, Canada</span><span class="clock" id="clk-bc">--:--</span><span class="sub"><span class="state"><span class="dot" id="dot-bc"></span><span id="st-bc">checking</span></span> &middot; <span id="off-bc">UTC&minus;8</span></span></div>
+        <div class="readout-foot">Based in British Columbia, running products and teams for Nigerian markets. Working hours shown as 09:00 to 17:00 local.</div>
+      </aside>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>10+</b><span>years building and leading software teams</span></div>
+      <div class="stat"><b>9</b><span>companies, from Real Technology in 2014 to MLHealth360 today</span></div>
+      <div class="stat"><b>8</b><span>products profiled, six of them founder-led and live</span></div>
+      <div class="stat"><b>2021</b><span>Wikimedia Foundation Research Award of the Year, for machine translation research</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="sld-wrap"><div class="wrap">
+  <div class="sec-head"><h2>One engineer. Eight products.</h2>
+  <p>Retail, farming, solar, distribution, construction, vehicles and clinical imaging, each owned from first sketch to production: API, web, mobile and the AI behind it. Open any project to see the problem, the build and the stack.</p></div>
+  <div class="sld">
+    <div class="sld-src"><svg viewBox="0 0 38 38" aria-hidden="true"><circle cx="19" cy="19" r="16"/><path d="M8 19 q5.5 -11 11 0 t11 0"/></svg><div><b>Kolawole Tajudeen</b><span class="mono">Source &middot; 10+ years &middot; 9 companies</span></div></div>
+    <div class="sld-trunk" aria-hidden="true"><span class="bus-label">Full-stack bus &middot; API &middot; web &middot; mobile &middot; AI</span></div>
+    <ol class="sld-feeders" aria-label="Projects">
+<li class="fd"><span class="brk" aria-hidden="true"></span><a href="#noovera"><span class="ref">P-01</span><b>Noovera Trade</b><span class="dom">Retail technology, Africa</span><span class="st">Live</span></a></li>
+<li class="fd"><span class="brk" aria-hidden="true"></span><a href="#farmpro"><span class="ref">P-02</span><b>FarmPro</b><span class="dom">Agritech and AI</span><span class="st">Live</span></a></li>
+<li class="fd"><span class="brk" aria-hidden="true"></span><a href="#omnienergy"><span class="ref">P-03</span><b>OmniEnergy</b><span class="dom">Clean energy, B2B</span><span class="st">Live</span></a></li>
+<li class="fd"><span class="brk" aria-hidden="true"></span><a href="#watthouse"><span class="ref">P-04</span><b>WattHouse</b><span class="dom">B2B electrical distribution</span><span class="st">Live</span></a></li>
+<li class="fd"><span class="brk" aria-hidden="true"></span><a href="#buildlink"><span class="ref">P-05</span><b>BuildLink</b><span class="dom">Construction technology</span><span class="st">Live</span></a></li>
+<li class="fd"><span class="brk" aria-hidden="true"></span><a href="#arrivox"><span class="ref">P-06</span><b>Arrivox</b><span class="dom">Cross-border vehicle marketplace</span><span class="st">Live</span></a></li>
+<li class="fd client"><span class="brk" aria-hidden="true"></span><a href="#clinical"><span class="ref">P-07 / P-08</span><b>Clinical AI</b><span class="dom">NeuroCatch and AI radiologist</span><span class="st">Client work</span></a></li>
+    </ol>
+  </div>
+  <div class="sld-legend"><span><i></i>Live product</span><span><i class="d"></i>Client work, not publicly hosted</span><span><i class="e"></i>Energised on hover</span></div>
+</div></div>
+
+<div class="block"><div class="wrap">
+  <h2>Where I have shipped</h2>
+  <p class="sub">From a small software house in 2014 to clinical AI today, with healthcare staffing, EV charging, AI search, e-learning and fintech along the way.</p>
+  <div class="cos"><a class="co" href="#experience"><span class="m">ML</span><span><b>MLHealth360</b><br><span class="y">Jan 2026 – present</span></span></a><a class="co" href="#experience"><span class="m">TG</span><span><b>Tap&amp;Go EV</b><br><span class="y">Apr 2025 – Dec 2025</span></span></a><a class="co" href="#experience"><span class="m">CH</span><span><b>Clipboard Health</b><br><span class="y">May 2022 – Apr 2025</span></span></a><a class="co" href="#experience"><span class="m">TZ</span><span><b>Sepana / Teza.ai</b><br><span class="y">Feb 2020 – May 2022</span></span></a><a class="co" href="#experience"><span class="m">AN</span><span><b>Andela</b><br><span class="y">Sep 2019 – Oct 2019</span></span></a><a class="co" href="#experience"><span class="m">EH</span><span><b>eHealth Africa</b><br><span class="y">Apr 2019 – Sep 2019</span></span></a></div>
+  <p style="margin-top:22px"><a class="btn" href="#experience">See every role</a></p>
+</div></div>
+<div class="block"><div class="wrap">
+  <h2>Follow the work</h2>
+  <p class="sub">Career on LinkedIn, code on GitHub, notes on X.</p>
+  <div class="slinks"><a class="slink" href="https://www.linkedin.com/in/bamtak/"><span class="mono">LinkedIn</span><b>linkedin.com/in/bamtak</b><span class="desc">Professional profile and work history</span><span class="go">Open &nearr;</span></a><a class="slink" href="https://github.com/bamtak"><span class="mono">GitHub</span><b>github.com/bamtak</b><span class="desc">Machine learning implementations and projects</span><span class="go">Open &nearr;</span></a><a class="slink" href="https://x.com/bamtak_"><span class="mono">X</span><b>x.com/bamtak_</b><span class="desc">Notes and updates, @bamtak_</span><span class="go">Open &nearr;</span></a><a class="slink" href="https://www.kaggle.com/bamtak"><span class="mono">Kaggle</span><b>kaggle.com/bamtak</b><span class="desc">Data science profile</span><span class="go">Open &nearr;</span></a></div>
+</div></div>
+<div class="wrap tb-wrap"><div class="tblock" role="group" aria-label="Sheet title block">
+<div><span class="mono">Sheet title</span><b>Title sheet</b></div>
+<div><span class="mono">Drawn by</span><b>K. Tajudeen</b></div>
+<div><span class="mono">Scale</span><b>NTS</b></div>
+<div><span class="mono">Sheet</span><b>01 / 12</b></div>
+<div><span class="mono">Status</span><b>Issued</b></div></div></div>
+</section><section class="view" data-view="work" data-title="Work" hidden>
+<div class="wrap">
+  <div class="page-head"><span class="mono">Sheet 02 of 12 &middot; Selected work</span><h1>Eight products, each owned end to end</h1>
+  <p>Six platforms I founded and run, and two clinical systems I lead for a healthcare client. Every page shows the problem, what I built, the stack and the scale. Screens labelled demo data or design prototype are not customer data.</p></div>
+  <table class="idx"><thead><tr><th>Ref</th><th>Project</th><th class="dom">Domain</th><th>Status</th><th class="site">Site</th></tr></thead><tbody><tr><td class="id">P-01</td><td class="name"><a href="#noovera">Noovera Trade</a></td><td class="dom">Retail technology, Africa</td><td><span class="pill live">Live</span></td><td class="site"><a href="https://noovera.app/">noovera.app</a></td></tr>
+<tr><td class="id">P-02</td><td class="name"><a href="#farmpro">FarmPro</a></td><td class="dom">Agritech and AI</td><td><span class="pill live">Live</span></td><td class="site"><a href="https://farmpro.app/">farmpro.app</a></td></tr>
+<tr><td class="id">P-03</td><td class="name"><a href="#omnienergy">OmniEnergy</a></td><td class="dom">Clean energy, B2B</td><td><span class="pill live">Live</span></td><td class="site"><a href="https://omnienergyco.com/">omnienergyco.com</a></td></tr>
+<tr><td class="id">P-04</td><td class="name"><a href="#watthouse">WattHouse</a></td><td class="dom">B2B electrical distribution</td><td><span class="pill live">Live</span></td><td class="site"><a href="https://watthouse.ng/">watthouse.ng</a></td></tr>
+<tr><td class="id">P-05</td><td class="name"><a href="#buildlink">BuildLink</a></td><td class="dom">Construction technology</td><td><span class="pill live">Live</span></td><td class="site"><a href="https://trybuildlink.com/">trybuildlink.com</a></td></tr>
+<tr><td class="id">P-06</td><td class="name"><a href="#arrivox">Arrivox</a></td><td class="dom">Cross-border vehicle marketplace</td><td><span class="pill live">Live</span></td><td class="site"><a href="https://arrivox.com/">arrivox.com</a></td></tr>
+<tr><td class="id">P-07</td><td class="name"><a href="#clinical">NeuroCatch portal</a></td><td class="dom">Clinical AI, patient results</td><td><span class="pill">Client work</span></td><td class="site">MLHealth360</td></tr>
+<tr><td class="id">P-08</td><td class="name"><a href="#clinical">AI radiologist edge device</a></td><td class="dom">Medical imaging, on-prem</td><td><span class="pill">Client work</span></td><td class="site">MLHealth360</td></tr></tbody></table>
+</div>
+<div class="wrap tb-wrap"><div class="tblock" role="group" aria-label="Sheet title block">
+<div><span class="mono">Sheet title</span><b>Selected work</b></div>
+<div><span class="mono">Drawn by</span><b>K. Tajudeen</b></div>
+<div><span class="mono">Scale</span><b>NTS</b></div>
+<div><span class="mono">Sheet</span><b>02 / 12</b></div>
+<div><span class="mono">Status</span><b>Issued</b></div></div></div>
+</section><section class="view proj" data-view="noovera" data-title="Noovera Trade" hidden>
+<div class="wrap">
+  <a class="back" href="#work">&larr; All work</a>
+  <article class="spec">
+      <div class="spec-head"><span class="id">P-01</span><h1>Noovera Trade</h1><img class="logo" src="img/noovera_logo.png" width="38" height="38" alt="Noovera logo"></div>
+      <p class="tagline">The AI Retail OS for Africa: point of sale, stock and credit records for informal merchants, on one phone, offline.</p>
+      <div class="spec-grid">
+        <div class="spec-copy">
+          <p>Market traders and corner shops run sales and stock from memory or paper. That leaks revenue through stockouts and credit, and leaves no records a lender can trust. Noovera turns an Android phone into the shop's daily operating system.</p>
+          <ul>
+            <li><b>Offline-first Flutter app.</b> LitePOS checkout, stock and day-end reports are held locally and reconciled with the cloud when the network returns.</li>
+            <li><b>Voice-first assistant.</b> Speech-to-text and intent parsing turn a spoken sale into a transaction. I evaluated on-device models against a cloud-primary policy and recorded the decision in an ADR.</li>
+            <li><b>Web command centre and storefronts.</b> Owner analytics, multi-shop comparison and credit exposure in React, with pickup-only online storefronts, Paystack subscriptions and a token wallet.</li>
+          </ul>
+          <dl class="facts">
+            <div><dt>Company</dt><dd>DeepIntel Ltd, founder and tech lead</dd></div>
+            <div><dt>Stack</dt><dd>Flutter, React, NestJS, Prisma, PostgreSQL, ts-rest, Zod, Paystack</dd></div>
+            <div><dt>Scale</dt><dd>55 database models, 44 migrations</dd></div>
+          </dl>
+          <a class="visit" href="https://noovera.app/">noovera.app &nearr;</a>
+        </div>
+        <figure class="media">
+          <div class="phones"><img src="img/noovera_home.jpg" width="495" height="1100" alt="Noovera home dashboard showing sales today, an AI restock insight and recent activity"><img src="img/noovera_sell.jpg" width="495" height="1100" alt="Noovera sell screen with product grid"></div>
+          <figcaption>Android app, home and sell flow</figcaption>
+        </figure>
+      </div>
+    </article>
+  <nav class="pn" aria-label="Project navigation"><span></span><a class="r" href="#farmpro"><span class="mono">Next</span><b>FarmPro</b></a></nav>
+</div><div class="wrap tb-wrap"><div class="tblock" role="group" aria-label="Sheet title block">
+<div><span class="mono">Sheet title</span><b>Noovera Trade</b></div>
+<div><span class="mono">Drawn by</span><b>K. Tajudeen</b></div>
+<div><span class="mono">Scale</span><b>NTS</b></div>
+<div><span class="mono">Sheet</span><b>03 / 12</b></div>
+<div><span class="mono">Status</span><b class="live">Live</b></div></div></div></section><section class="view proj" data-view="farmpro" data-title="FarmPro" hidden>
+<div class="wrap">
+  <a class="back" href="#work">&larr; All work</a>
+  <article class="spec">
+      <div class="spec-head"><span class="id">P-02</span><h1>FarmPro</h1><img class="logo" src="img/fp_logo.png" width="140" height="38" alt="FarmPro logo" style="background:#fff;padding:4px 8px"></div>
+      <p class="tagline">An AI-native farm operating system for Africa: maps, satellite monitoring, operations, finance and agronomy agents in one workspace.</p>
+      <div class="spec-grid">
+        <div class="spec-copy">
+          <p>Satellite data, weather, soil science, inventory, money and team work rarely sit in one place, so decisions come late and profitability stays opaque. FarmPro is the single record from land definition through harvest and sale.</p>
+          <ul>
+            <li><b>Field intelligence.</b> Draw or walk a boundary, attach crops, and let daily satellite scans surface vegetation anomalies early.</li>
+            <li><b>Agent layer.</b> Agronomics, Proactive Field, Vision (disease and pest identification from photos), Planner and Finance agents, plus a 30-minute heartbeat that checks weather, price moves, NDVI and pest risk.</li>
+            <li><b>Operations and money.</b> Multi-farm workspaces for crops, poultry and trade, fertigation, livestock, inventory, team payments, waybills, invoices and cooperative tools.</li>
+          </ul>
+          <dl class="facts">
+            <div><dt>Company</dt><dd>DeepIntel Ltd, product and tech lead</dd></div>
+            <div><dt>Stack</dt><dd>NestJS, Prisma, PostgreSQL, Socket.IO, React, Mapbox, Flutter</dd></div>
+            <div><dt>Scale</dt><dd>140+ database models, 80+ API modules, 107 migrations</dd></div>
+          </dl>
+          <a class="visit" href="https://farmpro.app/">farmpro.app &nearr;</a>
+        </div>
+        <figure class="media">
+          <div class="stage">
+            <div class="frame"><img src="img/fp_dash.jpg" width="1100" height="688" alt="FarmPro Command Center with an NDVI field map and live alert stream"></div>
+            <div class="over"><img src="img/fp_m_crops.jpg" width="405" height="900" alt="FarmPro mobile Today screen with farm health score"><img src="img/fp_m_money.jpg" width="405" height="900" alt="FarmPro mobile Money screen with net position"></div>
+          </div>
+          <figcaption>Web command center and Flutter field app, demo data</figcaption>
+        </figure>
+      </div>
+    </article>
+  <nav class="pn" aria-label="Project navigation"><a href="#noovera"><span class="mono">Previous</span><b>Noovera Trade</b></a><a class="r" href="#omnienergy"><span class="mono">Next</span><b>OmniEnergy</b></a></nav>
+</div><div class="wrap tb-wrap"><div class="tblock" role="group" aria-label="Sheet title block">
+<div><span class="mono">Sheet title</span><b>FarmPro</b></div>
+<div><span class="mono">Drawn by</span><b>K. Tajudeen</b></div>
+<div><span class="mono">Scale</span><b>NTS</b></div>
+<div><span class="mono">Sheet</span><b>04 / 12</b></div>
+<div><span class="mono">Status</span><b class="live">Live</b></div></div></div></section><section class="view proj" data-view="omnienergy" data-title="OmniEnergy" hidden>
+<div class="wrap">
+  <a class="back" href="#work">&larr; All work</a>
+  <article class="spec">
+      <div class="spec-head"><span class="id">P-03</span><h1>OmniEnergy</h1></div>
+      <p class="tagline">OmniEnable takes a Nigerian solar installer from site visit to consolidated equipment delivery, on a phone.</p>
+      <div class="spec-grid">
+        <div class="spec-copy">
+          <p>Installers lose hours per proposal to Excel and Word, quotes go stale when prices move, and equipment comes from several distributors with no consolidated order or warranty trail.</p>
+          <ul>
+            <li><b>Five-step workflow.</b> Drop a pin, design the system, send a proposal, close the deal, receive equipment in one order.</li>
+            <li><b>Site capture and design.</b> Satellite map with roof polygons and offline-capable cached tiles, codified sizing rules with visible assumptions, voltage-drop cable sizing and templated single-line diagrams.</li>
+            <li><b>Customer proposal pages.</b> A shareable link with no login, bill of materials, warranty and payment terms, and OTP approval. The brief targets under 15 minutes per proposal against 2+ hours today.</li>
+          </ul>
+          <dl class="facts">
+            <div><dt>Company</dt><dd>OmniEnergy Co., product and tech lead</dd></div>
+            <div><dt>Stack</dt><dd>NestJS, Prisma, PostgreSQL, React PWA, Mapbox, IndexedDB, Termii SMS</dd></div>
+            <div><dt>Earlier</dt><dd>OmniOne, an AI energy-management dashboard on PostgreSQL and InfluxDB</dd></div>
+          </dl>
+          <a class="visit" href="https://omnienergyco.com/">omnienergyco.com &nearr;</a>
+        </div>
+        <figure class="media">
+          <div class="phones"><img src="img/omni_main.jpg" width="575" height="1100" alt="OmniEnable installer dashboard with active projects and pipeline value"><img src="img/omni_quote.jpg" width="607" height="1100" alt="OmniEnable quote overview screen"></div>
+          <figcaption>Installer app, design prototypes</figcaption>
+        </figure>
+      </div>
+    </article>
+  <nav class="pn" aria-label="Project navigation"><a href="#farmpro"><span class="mono">Previous</span><b>FarmPro</b></a><a class="r" href="#watthouse"><span class="mono">Next</span><b>WattHouse</b></a></nav>
+</div><div class="wrap tb-wrap"><div class="tblock" role="group" aria-label="Sheet title block">
+<div><span class="mono">Sheet title</span><b>OmniEnergy</b></div>
+<div><span class="mono">Drawn by</span><b>K. Tajudeen</b></div>
+<div><span class="mono">Scale</span><b>NTS</b></div>
+<div><span class="mono">Sheet</span><b>05 / 12</b></div>
+<div><span class="mono">Status</span><b class="live">Live</b></div></div></div></section><section class="view proj" data-view="watthouse" data-title="WattHouse" hidden>
+<div class="wrap">
+  <a class="back" href="#work">&larr; All work</a>
+  <article class="spec">
+      <div class="spec-head"><span class="id">P-04</span><h1>WattHouse</h1><img class="logo" src="img/wh_icon.png" width="38" height="38" alt="WattHouse logo"></div>
+      <p class="tagline">Trade pricing, orders and investor reporting for a technical distributor of electrical, solar and energy-storage equipment in Lagos.</p>
+      <div class="spec-grid">
+        <div class="spec-copy">
+          <p>A working prototype on a low-code front end and Supabase triggers had access-control gaps: staff roles could see admin pages the API then refused. The business needed a typed, auditable system it could trust with orders and money.</p>
+          <ul>
+            <li><b>Re-platformed backend.</b> I reconstructed the database semantics from the prototype and rebuilt them as a NestJS API with typed contracts, a global JWT guard and a documented role matrix.</li>
+            <li><b>Two price lists.</b> Retail pricing, and trade pricing unlocked by installer verification, with a cost-floor guard and director-only overrides.</li>
+            <li><b>Order to handover, and investors.</b> Orders, invoices, part-payment receipts and serial-number handover, plus import cycles with term sheets and profit distributions in an investor portal.</li>
+          </ul>
+          <dl class="facts">
+            <div><dt>Role</dt><dd>Backend and product engineering</dd></div>
+            <div><dt>Stack</dt><dd>NestJS, Prisma, PostgreSQL, ts-rest, TanStack Start, React, Tailwind</dd></div>
+            <div><dt>Scale</dt><dd>30 database models, 7+ roles in the access matrix</dd></div>
+          </dl>
+          <a class="visit" href="https://watthouse.ng/">watthouse.ng &nearr;</a>
+        </div>
+        <figure class="media">
+          <div class="frame"><img src="img/wh_bess.jpg" width="900" height="600" alt="Battery energy storage cabinet from the WattHouse catalogue"></div>
+          <div class="duo"><div class="frame"><img src="img/wh_inv.jpg" width="900" height="600" alt="Hybrid inverter from the catalogue"></div><div class="frame"><img src="img/wh_pv.jpg" width="900" height="600" alt="Mono solar panel from the catalogue"></div></div>
+          <figcaption>Storefront catalogue imagery, demo data</figcaption>
+        </figure>
+      </div>
+    </article>
+  <nav class="pn" aria-label="Project navigation"><a href="#omnienergy"><span class="mono">Previous</span><b>OmniEnergy</b></a><a class="r" href="#buildlink"><span class="mono">Next</span><b>BuildLink</b></a></nav>
+</div><div class="wrap tb-wrap"><div class="tblock" role="group" aria-label="Sheet title block">
+<div><span class="mono">Sheet title</span><b>WattHouse</b></div>
+<div><span class="mono">Drawn by</span><b>K. Tajudeen</b></div>
+<div><span class="mono">Scale</span><b>NTS</b></div>
+<div><span class="mono">Sheet</span><b>06 / 12</b></div>
+<div><span class="mono">Status</span><b class="live">Live</b></div></div></div></section><section class="view proj" data-view="buildlink" data-title="BuildLink" hidden>
+<div class="wrap">
+  <a class="back" href="#work">&larr; All work</a>
+  <article class="spec">
+      <div class="spec-head"><span class="id">P-05</span><h1>BuildLink</h1><img class="logo" src="img/bl_icon.png" width="38" height="38" alt="BuildLink logo"></div>
+      <p class="tagline">The trust and cash operating system for construction: from BOQ to payment, backed by proof from site.</p>
+      <div class="spec-grid">
+        <div class="spec-copy">
+          <p>Money on construction projects moves on disputed claims and unverifiable site evidence, and owners abroad cannot see progress. BuildLink ties the commercial record to site evidence, so payment follows certified, proven work.</p>
+          <ul>
+            <li><b>Commercial spine.</b> BOQ import, valuations and IPC certificates with retention, then certify, approve, record release and record paid.</li>
+            <li><b>Package-scoped access.</b> Clients and QS see every work package, contractors see only theirs, and contractor margins, stock and payroll stay private.</li>
+            <li><b>Site evidence.</b> QA/QC hold points with e-signature, GPS-tagged tamper-evident photos, an offline field PWA and no-login links for artisans.</li>
+            <li><b>Regulatory-aware.</b> It records attestation and never holds funds. A data note maps GPS and presence data to the Nigeria Data Protection Act.</li>
+          </ul>
+          <dl class="facts">
+            <div><dt>Company</dt><dd>Magesense Systems, product and tech lead</dd></div>
+            <div><dt>Stack</dt><dd>NestJS, Prisma, PostgreSQL, BullMQ, Socket.IO, React, Leaflet</dd></div>
+            <div><dt>Scale</dt><dd>110+ database models, 60+ API modules, NGN pricing tiers</dd></div>
+          </dl>
+          <a class="visit" href="https://trybuildlink.com/">trybuildlink.com &nearr;</a>
+        </div>
+        <figure class="media">
+          <div class="frame"><img src="img/bl_og.jpg" width="1000" height="525" alt="BuildLink marketing graphic: from BOQ to payment, backed by proof from site"></div>
+          <figcaption>From trybuildlink.com</figcaption>
+        </figure>
+      </div>
+    </article>
+  <nav class="pn" aria-label="Project navigation"><a href="#watthouse"><span class="mono">Previous</span><b>WattHouse</b></a><a class="r" href="#arrivox"><span class="mono">Next</span><b>Arrivox</b></a></nav>
+</div><div class="wrap tb-wrap"><div class="tblock" role="group" aria-label="Sheet title block">
+<div><span class="mono">Sheet title</span><b>BuildLink</b></div>
+<div><span class="mono">Drawn by</span><b>K. Tajudeen</b></div>
+<div><span class="mono">Scale</span><b>NTS</b></div>
+<div><span class="mono">Sheet</span><b>07 / 12</b></div>
+<div><span class="mono">Status</span><b class="live">Live</b></div></div></div></section><section class="view proj" data-view="arrivox" data-title="Arrivox" hidden>
+<div class="wrap">
+  <a class="back" href="#work">&larr; All work</a>
+  <article class="spec">
+      <div class="spec-head"><span class="id">P-06</span><h1>Arrivox</h1><img class="logo" src="img/ab_mark.png" width="54" height="38" alt="Arrivox logo" style="object-fit:contain"></div>
+      <p class="tagline">A marketplace for cross-border vehicle trade between North America and Lagos: list before the car ships, find verified shippers, settle through one ledger.</p>
+      <div class="spec-grid">
+        <div class="spec-copy">
+          <p>Buying a car overseas and shipping it home is fragmented. Listings, deposits, freight quotes and paperwork sit across chats and intermediaries, and trust is the bottleneck, especially for diaspora buyers.</p>
+          <ul>
+            <li><b>AutoList.</b> Sellers list vehicles before they arrive, buyers register interest, the seller ranks offers and the chosen buyer commits with a 5% deposit.</li>
+            <li><b>ShipMyCar.</b> Freight quotes from platform-approved shippers, with an internal rate-management tool.</li>
+            <li><b>Trust and compliance.</b> KYC with identity-verification providers, FINTRAC-aligned AML and KYC guidelines, a wallet ledger, Stripe payments, disputes and ratings.</li>
+          </ul>
+          <dl class="facts">
+            <div><dt>Role</dt><dd>Product and tech lead</dd></div>
+            <div><dt>Stack</dt><dd>NestJS, Prisma, PostgreSQL, ts-rest, Stripe, React PWA, Docker, DigitalOcean</dd></div>
+            <div><dt>Scale</dt><dd>27 database models, 30+ API modules, 31 migrations</dd></div>
+          </dl>
+          <a class="visit" href="https://arrivox.com/">arrivox.com &nearr;</a>
+        </div>
+        <figure class="media">
+          <div class="frame"><img src="img/ab_dash.jpg" width="1000" height="584" alt="Arrivox buyer console with wallet, active transactions and shipment timeline"></div>
+          <div class="frame"><img src="img/ab_ship.jpg" width="1000" height="573" alt="ShipMyCar rate matching screen"></div>
+          <figcaption>Buyer console and ShipMyCar, design prototypes</figcaption>
+        </figure>
+      </div>
+    </article>
+  <nav class="pn" aria-label="Project navigation"><a href="#buildlink"><span class="mono">Previous</span><b>BuildLink</b></a><a class="r" href="#clinical"><span class="mono">Next</span><b>Clinical AI at MLHealth360</b></a></nav>
+</div><div class="wrap tb-wrap"><div class="tblock" role="group" aria-label="Sheet title block">
+<div><span class="mono">Sheet title</span><b>Arrivox</b></div>
+<div><span class="mono">Drawn by</span><b>K. Tajudeen</b></div>
+<div><span class="mono">Scale</span><b>NTS</b></div>
+<div><span class="mono">Sheet</span><b>08 / 12</b></div>
+<div><span class="mono">Status</span><b class="live">Live</b></div></div></div></section><section class="view proj" data-view="clinical" data-title="Clinical AI at MLHealth360" hidden>
+<div class="wrap">
+  <a class="back" href="#work">&larr; All work</a>
+  <article class="spec">
+      <div class="spec-head"><span class="id">P-07 / P-08</span><h1>Clinical AI at MLHealth360</h1></div>
+      <p class="tagline">Privacy-first clinical AI with a cloud-grade experience: a patient results portal, and an on-premises radiologist device where patient data never leaves the facility.</p>
+      <div class="spec-grid">
+        <div class="spec-copy">
+          <p><b>NeuroCatch client portal.</b> Led from inception to production. Patients read their test results in plain language and track trends over time, with AI agents doing the explaining. I also join client discussions to shape scope.</p>
+          <ul>
+            <li><b>AI radiologist edge device.</b> An on-prem platform on an NVIDIA Blackwell device: ML models, application services and the database all run on the device.</li>
+            <li><b>Data stays on site.</b> Only model metrics, performance data and logs are collected, so support works without access to patient data.</li>
+            <li><b>Cloud parity.</b> Built after the cloud platform to reproduce the same user experience on-prem, with DICOM, DICOMweb and HL7 FHIR support.</li>
+            <li><b>Build versus buy.</b> I weighed SigNoz and Grafana/Prometheus, then built a purpose-made monitoring page that fits a single appliance.</li>
+          </ul>
+          <dl class="facts">
+            <div><dt>Employer</dt><dd>MLHealth360, lead software engineer</dd></div>
+            <div><dt>Stack</dt><dd>Python, FastAPI, React, LoginRadius, NVIDIA Blackwell, DICOM, HL7 FHIR</dd></div>
+            <div><dt>Split</dt><dd>About 55% leadership, 45% hands-on</dd></div>
+          </dl>
+        </div>
+        <figure class="media">
+          <div class="frame diagram">
+            <svg viewBox="0 0 520 330" role="img" aria-labelledby="dg-t dg-d">
+              <title id="dg-t">Edge device data flow</title>
+              <desc id="dg-d">Imaging workflow in the facility connects to an on-premises appliance holding ML models, app services and the database. Only metrics and logs leave, dashed, to vendor support.</desc>
+              <rect class="box" x="14" y="14" width="492" height="214" rx="6"/>
+              <text class="m" x="28" y="36">FACILITY NETWORK</text>
+              <text x="28" y="116">Imaging</text><text x="28" y="132">workflow</text>
+              <path class="wire" d="M92 122 H150"/>
+              <path class="wire" d="M144 117 l8 5 -8 5"/>
+              <rect class="box" x="158" y="48" width="336" height="166" rx="5" style="stroke:var(--accent)"/>
+              <text class="a" x="172" y="70">ON-PREM APPLIANCE &middot; NVIDIA BLACKWELL</text>
+              <rect class="inner" x="172" y="86" width="96" height="112" rx="3"/><text x="184" y="136">ML</text><text x="184" y="152">models</text>
+              <rect class="inner" x="280" y="86" width="96" height="112" rx="3"/><text x="292" y="136">App</text><text x="292" y="152">services</text>
+              <rect class="inner" x="388" y="86" width="92" height="112" rx="3"/><text x="400" y="136">Patient</text><text x="400" y="152">database</text>
+              <path class="wire dash" d="M326 214 V262"/>
+              <path class="wire dash" d="M321 256 l5 8 5 -8"/>
+              <rect class="inner" x="226" y="268" width="200" height="46" rx="3"/>
+              <text x="242" y="288">Vendor support</text><text class="m" x="242" y="304">metrics and logs only</text>
+              <text class="m" x="28" y="252">PATIENT DATA STAYS INSIDE THE SOLID BOX</text>
+            </svg>
+          </div>
+          <figcaption>Edge device data flow, simplified</figcaption>
+        </figure>
+      </div>
+    </article>
+  <nav class="pn" aria-label="Project navigation"><a href="#arrivox"><span class="mono">Previous</span><b>Arrivox</b></a><span></span></nav>
+</div><div class="wrap tb-wrap"><div class="tblock" role="group" aria-label="Sheet title block">
+<div><span class="mono">Sheet title</span><b>Clinical AI at MLHealth360</b></div>
+<div><span class="mono">Drawn by</span><b>K. Tajudeen</b></div>
+<div><span class="mono">Scale</span><b>NTS</b></div>
+<div><span class="mono">Sheet</span><b>09 / 12</b></div>
+<div><span class="mono">Status</span><b>Client work</b></div></div></div></section><section class="view" data-view="experience" data-title="Experience" hidden>
+<div class="wrap">
+  <div class="page-head"><span class="mono">Experience</span><h1>A decade of owning systems and raising engineers</h1>
+  <p>Nine companies, from infrastructure at a small software house in 2014 to leading an AI radiology platform today. The pattern holds throughout: take ownership of the hard system, then make the team around it stronger.</p></div>
+</div>
+<div class="block"><div class="wrap">
+  <h2>Career timeline</h2>
+  <p class="sub">June 2014 to the present. The highlighted bar is my current role.</p>
+  <div class="gantt" role="img" aria-label="Career timeline from 2014 to the present"><div class="g-row g-head"><span></span><div class="g-track"><span class="gt" style="left:4.67%">2015</span><span class="gt" style="left:12.67%">2016</span><span class="gt" style="left:20.67%">2017</span><span class="gt" style="left:28.67%">2018</span><span class="gt" style="left:36.67%">2019</span><span class="gt" style="left:44.67%">2020</span><span class="gt" style="left:52.67%">2021</span><span class="gt" style="left:60.67%">2022</span><span class="gt" style="left:68.67%">2023</span><span class="gt" style="left:76.67%">2024</span><span class="gt" style="left:84.67%">2025</span><span class="gt" style="left:92.67%">2026</span></div></div><div class="g-row"><span class="g-name">MLHealth360</span><div class="g-track"><i style="left:4.67%"></i><i style="left:12.67%"></i><i style="left:20.67%"></i><i style="left:28.67%"></i><i style="left:36.67%"></i><i style="left:44.67%"></i><i style="left:52.67%"></i><i style="left:60.67%"></i><i style="left:68.67%"></i><i style="left:76.67%"></i><i style="left:84.67%"></i><i style="left:92.67%"></i><b class="bar cur" style="left:92.67%;width:7.33%"></b></div></div><div class="g-row"><span class="g-name">Tap&amp;Go EV</span><div class="g-track"><i style="left:4.67%"></i><i style="left:12.67%"></i><i style="left:20.67%"></i><i style="left:28.67%"></i><i style="left:36.67%"></i><i style="left:44.67%"></i><i style="left:52.67%"></i><i style="left:60.67%"></i><i style="left:68.67%"></i><i style="left:76.67%"></i><i style="left:84.67%"></i><i style="left:92.67%"></i><b class="bar" style="left:86.67%;width:6.00%"></b></div></div><div class="g-row"><span class="g-name">Clipboard Health</span><div class="g-track"><i style="left:4.67%"></i><i style="left:12.67%"></i><i style="left:20.67%"></i><i style="left:28.67%"></i><i style="left:36.67%"></i><i style="left:44.67%"></i><i style="left:52.67%"></i><i style="left:60.67%"></i><i style="left:68.67%"></i><i style="left:76.67%"></i><i style="left:84.67%"></i><i style="left:92.67%"></i><b class="bar" style="left:63.33%;width:24.00%"></b></div></div><div class="g-row"><span class="g-name">Sepana / Teza.ai</span><div class="g-track"><i style="left:4.67%"></i><i style="left:12.67%"></i><i style="left:20.67%"></i><i style="left:28.67%"></i><i style="left:36.67%"></i><i style="left:44.67%"></i><i style="left:52.67%"></i><i style="left:60.67%"></i><i style="left:68.67%"></i><i style="left:76.67%"></i><i style="left:84.67%"></i><i style="left:92.67%"></i><b class="bar" style="left:45.33%;width:18.67%"></b></div></div><div class="g-row"><span class="g-name">Andela</span><div class="g-track"><i style="left:4.67%"></i><i style="left:12.67%"></i><i style="left:20.67%"></i><i style="left:28.67%"></i><i style="left:36.67%"></i><i style="left:44.67%"></i><i style="left:52.67%"></i><i style="left:60.67%"></i><i style="left:68.67%"></i><i style="left:76.67%"></i><i style="left:84.67%"></i><i style="left:92.67%"></i><b class="bar" style="left:42.00%;width:1.33%"></b></div></div><div class="g-row"><span class="g-name">eHealth Africa</span><div class="g-track"><i style="left:4.67%"></i><i style="left:12.67%"></i><i style="left:20.67%"></i><i style="left:28.67%"></i><i style="left:36.67%"></i><i style="left:44.67%"></i><i style="left:52.67%"></i><i style="left:60.67%"></i><i style="left:68.67%"></i><i style="left:76.67%"></i><i style="left:84.67%"></i><i style="left:92.67%"></i><b class="bar" style="left:38.67%;width:4.00%"></b></div></div><div class="g-row"><span class="g-name">Techvibes Ltd</span><div class="g-track"><i style="left:4.67%"></i><i style="left:12.67%"></i><i style="left:20.67%"></i><i style="left:28.67%"></i><i style="left:36.67%"></i><i style="left:44.67%"></i><i style="left:52.67%"></i><i style="left:60.67%"></i><i style="left:68.67%"></i><i style="left:76.67%"></i><i style="left:84.67%"></i><i style="left:92.67%"></i><b class="bar" style="left:26.67%;width:12.00%"></b></div></div><div class="g-row"><span class="g-name">Shopping Internet Service</span><div class="g-track"><i style="left:4.67%"></i><i style="left:12.67%"></i><i style="left:20.67%"></i><i style="left:28.67%"></i><i style="left:36.67%"></i><i style="left:44.67%"></i><i style="left:52.67%"></i><i style="left:60.67%"></i><i style="left:68.67%"></i><i style="left:76.67%"></i><i style="left:84.67%"></i><i style="left:92.67%"></i><b class="bar" style="left:23.33%;width:3.33%"></b></div></div><div class="g-row"><span class="g-name">Real Technology Ltd</span><div class="g-track"><i style="left:4.67%"></i><i style="left:12.67%"></i><i style="left:20.67%"></i><i style="left:28.67%"></i><i style="left:36.67%"></i><i style="left:44.67%"></i><i style="left:52.67%"></i><i style="left:60.67%"></i><i style="left:68.67%"></i><i style="left:76.67%"></i><i style="left:84.67%"></i><i style="left:92.67%"></i><b class="bar" style="left:0.00%;width:23.33%"></b></div></div></div>
+</div></div>
+<div class="block"><div class="wrap">
+  <h2>Roles and results</h2>
+  <p class="sub">Most recent first, with the outcomes that mattered.</p>
+  <div class="jobs"><article class="job">
+  <div class="mono-tile" aria-hidden="true">ML</div>
+  <div class="job-body">
+    <div class="job-head"><h3>MLHealth360</h3><span class="pill live">Current</span></div>
+    <p class="role">Lead Software Engineer, AI Platform <span class="dates">Jan 2026 to present</span></p>
+    <p class="blurb">Clinical AI and medical imaging. <a class="inline" href="#clinical">See the projects</a></p>
+    <ul><li>Architecting a production-grade AI radiology platform that processes DICOM and DICOM SR imaging data.</li><li>Designing ML inference pipelines that extract structured clinical findings in a safety-critical, regulated environment.</li><li>Owning system design end to end: ingestion, model integration, REST APIs, and deployment across Azure Container Apps, AKS, Azure Health Data Services (DICOMweb) and on-premises infrastructure.</li><li>Leading the NeuroCatch patient portal and the on-prem edge device, working directly with clinical and product stakeholders.</li></ul>
+    <div class="chips"><span>Python</span><span>FastAPI</span><span>React</span><span>Azure</span><span>Kubernetes</span><span>DICOM</span><span>HL7 FHIR</span></div>
+  </div>
+</article>
+<article class="job">
+  <div class="mono-tile" aria-hidden="true">TG</div>
+  <div class="job-body">
+    <div class="job-head"><h3>Tap&amp;Go EV</h3></div>
+    <p class="role">Lead Software Engineer <span class="dates">Apr 2025 to Dec 2025</span></p>
+    <p class="blurb">EV charging station management platform.</p>
+    <ul><li>Led design and development of the charging platform and executed a migration from monolith to microservices on AWS and Kubernetes.</li><li>Integrated an AI image-generation pipeline and a Redis caching layer, improving responsiveness and reducing infrastructure cost.</li><li>Built and owned CI/CD, and implemented DataDog monitoring and alerting to hold 99.9% uptime in a safety-critical environment.</li><li>Mentored junior engineers and set code-quality standards adopted across the team of seven.</li></ul>
+    <div class="chips"><span>Java</span><span>Spring Boot</span><span>React</span><span>AWS</span><span>Kubernetes</span><span>PostgreSQL</span><span>Redis</span><span>DataDog</span></div>
+  </div>
+</article>
+<article class="job">
+  <div class="mono-tile" aria-hidden="true">CH</div>
+  <div class="job-body">
+    <div class="job-head"><h3>Clipboard Health</h3></div>
+    <p class="role">Senior Software Engineer <span class="dates">May 2022 to Apr 2025</span></p>
+    <p class="blurb">Healthcare staffing platform.</p>
+    <ul><li>Built and owned the Attendance Score Service, a data pipeline over tens of millions of records that powers trust and reliability scoring for healthcare workers.</li><li>Drove platform-wide performance work for a 30% reduction in latency and a 20% improvement in user retention.</li><li>Architected the move from a legacy monolith to microservices, reducing downtime by 40%.</li><li>Mentored engineers and established review standards used across the organisation.</li></ul>
+    <div class="chips"><span>TypeScript</span><span>Node.js</span><span>Python</span><span>PostgreSQL</span><span>Snowflake</span><span>DBT</span></div>
+  </div>
+</article>
+<article class="job">
+  <div class="mono-tile" aria-hidden="true">TZ</div>
+  <div class="job-body">
+    <div class="job-head"><h3>Sepana / Teza.ai</h3></div>
+    <p class="role">Lead Software Engineer, ML Platform <span class="dates">Feb 2020 to May 2022</span></p>
+    <p class="blurb">AI-powered public data intelligence.</p>
+    <ul><li>Spearheaded the flagship AI analytics platform and its core data-processing pipelines.</li><li>Architected the API infrastructure behind cloutavista.com and askmirror.xyz, integrating the company's search technology.</li><li>Built search and discovery APIs in Python/Flask and Java for ML-driven consumer products.</li></ul>
+    <div class="chips"><span>Python</span><span>Flask</span><span>Java</span><span>NLP</span><span>Elasticsearch</span></div>
+  </div>
+</article>
+<article class="job">
+  <div class="mono-tile" aria-hidden="true">AN</div>
+  <div class="job-body">
+    <div class="job-head"><h3>Andela</h3></div>
+    <p class="role">Senior Software Engineer <span class="dates">Sep 2019 to Oct 2019</span></p>
+    <p class="blurb">Client project work.</p>
+    <ul><li>Mentored junior engineers and delivered specific client work in JavaScript, React and Java.</li></ul>
+    <div class="chips"><span>JavaScript</span><span>React</span><span>Java</span></div>
+  </div>
+</article>
+<article class="job">
+  <div class="mono-tile" aria-hidden="true">EH</div>
+  <div class="job-body">
+    <div class="job-head"><h3>eHealth Africa</h3></div>
+    <p class="role">Coordinator, Software Developer <span class="dates">Apr 2019 to Sep 2019</span></p>
+    <p class="blurb">Health systems for clinics and laboratories.</p>
+    <ul><li>Designed and built the EHAClinics and EHALaboratories systems that securely manage electronic medical records.</li><li>Worked on the membership, blog, CRM and POS modules of the clinics ERP, plus data integration with other mission-critical systems.</li><li>Mentored junior developers and led code reviews for security and scalability.</li></ul>
+    <div class="chips"><span>Python</span><span>Odoo</span><span>JavaScript</span><span>Docker</span></div>
+  </div>
+</article>
+<article class="job">
+  <div class="mono-tile" aria-hidden="true">TV</div>
+  <div class="job-body">
+    <div class="job-head"><h3>Techvibes Ltd</h3></div>
+    <p class="role">Team Lead <span class="dates">Oct 2017 to Mar 2019</span></p>
+    <p class="blurb">E-learning and enterprise software.</p>
+    <ul><li>Led the team that built Studylab (studylab360.com), a data-driven e-learning platform for high school students across Africa.</li><li>Contributed to Easy30, an enterprise tool for real estate client and transaction management.</li></ul>
+    <div class="chips"><span>Java</span><span>Spring</span><span>React</span><span>AWS</span></div>
+  </div>
+</article>
+<article class="job">
+  <div class="mono-tile" aria-hidden="true">SI</div>
+  <div class="job-body">
+    <div class="job-head"><h3>Shopping Internet Service</h3></div>
+    <p class="role">Senior Software Engineer <span class="dates">May 2017 to Sep 2017</span></p>
+    <p class="blurb">E-commerce and fintech.</p>
+    <ul><li>Designed and built microservice APIs for e-commerce and fintech use cases.</li><li>Developed Naira.com, a payments mobile app for iOS.</li></ul>
+    <div class="chips"><span>Microservices</span><span>iOS</span></div>
+  </div>
+</article>
+<article class="job">
+  <div class="mono-tile" aria-hidden="true">RT</div>
+  <div class="job-body">
+    <div class="job-head"><h3>Real Technology Ltd</h3></div>
+    <p class="role">Software Engineer <span class="dates">Jun 2014 to Apr 2017</span></p>
+    <p class="blurb">Software and infrastructure.</p>
+    <ul><li>Designed, developed and supported the company's infrastructure and software applications.</li></ul>
+    
+  </div>
+</article></div>
+</div></div>
+<div class="block"><div class="wrap">
+  <h2>Companies I founded</h2>
+  <p class="sub">Built and operated alongside full-time engineering roles.</p>
+  <div class="fc">
+    <div class="card"><span class="mono">Nigeria</span><h3>DeepIntel Ltd</h3><p>Nigeria-registered technology company behind Noovera and several of the platforms in the Work section.</p></div>
+    <div class="card"><span class="mono">Canada</span><h3>Magesense Systems Inc.</h3><p>AI platform company for conversational AI, predictive analytics and data platforms, and the maker of BuildLink. <a class="inline" href="https://magesenseinc.com/">magesenseinc.com</a></p></div>
+    <div class="card"><span class="mono">Nigeria</span><h3>GrainSparkles Ltd</h3><p>Nigeria-registered agritech company that operates a farm.</p></div>
+  </div>
+</div></div>
+<div class="block"><div class="wrap">
+  <h2>Open source</h2>
+  <div class="oss" style="margin-top:14px">
+    <div class="card" style="padding:20px 22px;border:1px solid var(--line);border-radius:6px;background:var(--panel)"><h3 style="font-size:1.2rem;margin-bottom:6px">Masakhane NLP</h3><p style="color:var(--muted);font-size:.94rem">Built the baseline for Yoruba to English neural machine translation.</p></div>
+    <div class="card" style="padding:20px 22px;border:1px solid var(--line);border-radius:6px;background:var(--panel)"><h3 style="font-size:1.2rem;margin-bottom:6px">Deep Learning Indaba</h3><p style="color:var(--muted);font-size:.94rem">Helped resolve back-end issues on the Indaba project.</p></div>
+  </div>
+</div></div>
+<div class="wrap tb-wrap"><div class="tblock" role="group" aria-label="Sheet title block">
+<div><span class="mono">Sheet title</span><b>Career and companies</b></div>
+<div><span class="mono">Drawn by</span><b>K. Tajudeen</b></div>
+<div><span class="mono">Scale</span><b>NTS</b></div>
+<div><span class="mono">Sheet</span><b>10 / 12</b></div>
+<div><span class="mono">Status</span><b>Issued</b></div></div></div></section><section class="view" data-view="about" data-title="About" hidden>
+<div class="wrap">
+  <div class="page-head"><span class="mono">About</span><h1>Electrical engineering first, then machine intelligence</h1>
+  <p>I trained as an electrical engineer, moved into software, then studied machine intelligence on a Google and Facebook scholarship. That mix shows in the work: products for clinics, farms, shops and construction sites, where a system that fails costs real money or real care.</p></div>
+</div>
+<div class="block"><div class="wrap">
+  <h2>How I build</h2>
+  <p class="sub">Six habits that make the results dependable.</p>
+  <div class="principles">
+      <div class="pr"><span class="mono">Contracts</span><h3>Web, mobile and API that cannot drift apart</h3><p>Typed contracts (ts-rest and Zod) published as versioned packages, so a breaking change fails the build instead of a customer&rsquo;s phone.</p></div>
+      <div class="pr"><span class="mono">AI</span><h3>AI that earns its place in production</h3><p>Agents with feedback loops, vision for crop disease and invoices, voice commands, and on-prem models when data cannot leave the site.</p></div>
+      <div class="pr"><span class="mono">Connectivity</span><h3>Works when the network does not</h3><p>Offline-first mobile that reconciles later, cached map tiles, and no-login links for people who have no accounts.</p></div>
+      <div class="pr"><span class="mono">Trust</span><h3>Money and identity, done carefully</h3><p>Paystack and Stripe, KYC providers and wallet ledgers, shaped by FINTRAC and the Nigeria Data Protection Act. Attestation, not custody, where a licence would apply.</p></div>
+      <div class="pr"><span class="mono">Access</span><h3>Private data stays private</h3><p>Role matrices and package-scoped visibility, so every user sees exactly their slice and nothing more.</p></div>
+      <div class="pr"><span class="mono">Delivery</span><h3>Handover-ready from day one</h3><p>Every repository ships with verify scripts, CI, briefs, decision records and seeded demo data, so anyone can run it and demo it.</p></div>
+  </div>
+</div></div>
+<div class="block"><div class="wrap">
+  <div class="bg-grid">
+    <div>
+      <div class="side-h">Education</div>
+      <div class="side-block" style="margin-top:0"><ul>
+        <li><b>MSc, Machine Intelligence</b><span>African Institute for Mathematical Sciences (AIMS), Ghana. Google and Facebook scholarship. Thesis on low-resource NLP and machine translation for African languages.</span></li>
+        <li><b>BSc, Electrical and Electronics Engineering</b><span>University of Ilorin, Nigeria</span></li>
+      </ul></div>
+      <div class="side-h" style="margin-top:34px">Research and recognition</div>
+      <div class="side-block" style="margin-top:0"><ul>
+        <li><b>2021 Wikimedia Foundation Research Award of the Year</b><span>Awarded to one research team globally for &ldquo;Participatory Research for Low-resourced Machine Translation: A Case Study in African Languages&rdquo; (Adelani et al., including Tajudeen, K.).</span></li>
+        <li><b>Google and Facebook Scholarship</b><span>African Master&rsquo;s in Machine Intelligence, Ghana.</span></li>
+      </ul></div>
+    </div>
+    <div>
+      <div class="side-h">Core stack</div>
+      <div class="side-block" style="margin-top:0"><ul>
+        <li><b>Languages</b><span>TypeScript, Python, Java, SQL</span></li>
+        <li><b>Frameworks</b><span>Node.js, NestJS, React, Flask, Spring Boot, PyTorch, Flutter</span></li>
+        <li><b>Data and ML</b><span>PostgreSQL, MongoDB, Snowflake, DBT, Pandas, NumPy, NLP, LLM APIs, vision</span></li>
+        <li><b>Cloud and DevOps</b><span>AWS, Azure, GCP, Kubernetes, Docker, Redis, Elasticsearch, GitHub Actions, Jenkins</span></li>
+        <li><b>Observability</b><span>DataDog, Grafana, Sentry</span></li>
+      </ul></div>
+    </div>
+  </div>
+</div></div>
+<div class="wrap tb-wrap"><div class="tblock" role="group" aria-label="Sheet title block">
+<div><span class="mono">Sheet title</span><b>Approach and background</b></div>
+<div><span class="mono">Drawn by</span><b>K. Tajudeen</b></div>
+<div><span class="mono">Scale</span><b>NTS</b></div>
+<div><span class="mono">Sheet</span><b>11 / 12</b></div>
+<div><span class="mono">Status</span><b>Issued</b></div></div></div></section><section class="view" data-view="contact" data-title="Contact" hidden>
+<div class="wrap">
+  <div class="page-head"><span class="mono">Contact</span><h1>Let us talk about what you are building</h1>
+  <p>I am happy to walk through the architecture or run a live demo of any project, on Lagos or British Columbia time. The profiles below are the quickest way to reach me.</p></div>
+</div>
+<div class="block"><div class="wrap">
+  <h2>Where to find me</h2>
+  <p class="sub">Career, code and notes.</p>
+  <div class="slinks"><a class="slink" href="https://www.linkedin.com/in/bamtak/"><span class="mono">LinkedIn</span><b>linkedin.com/in/bamtak</b><span class="desc">Professional profile and work history</span><span class="go">Open &nearr;</span></a><a class="slink" href="https://github.com/bamtak"><span class="mono">GitHub</span><b>github.com/bamtak</b><span class="desc">Machine learning implementations and projects</span><span class="go">Open &nearr;</span></a><a class="slink" href="https://x.com/bamtak_"><span class="mono">X</span><b>x.com/bamtak_</b><span class="desc">Notes and updates, @bamtak_</span><span class="go">Open &nearr;</span></a><a class="slink" href="https://www.kaggle.com/bamtak"><span class="mono">Kaggle</span><b>kaggle.com/bamtak</b><span class="desc">Data science profile</span><span class="go">Open &nearr;</span></a></div>
+</div></div>
+<div class="block"><div class="wrap">
+  <h2>Try the products</h2>
+  <p class="sub">Six live platforms you can open today.</p>
+  <div class="links"><a href="https://noovera.app/">noovera.app</a><a href="https://farmpro.app/">farmpro.app</a><a href="https://omnienergyco.com/">omnienergyco.com</a><a href="https://watthouse.ng/">watthouse.ng</a><a href="https://trybuildlink.com/">trybuildlink.com</a><a href="https://arrivox.com/">arrivox.com</a><a href="https://magesenseinc.com/">magesenseinc.com</a></div>
+</div></div>
+<div class="wrap tb-wrap"><div class="tblock" role="group" aria-label="Sheet title block">
+<div><span class="mono">Sheet title</span><b>Contacts and links</b></div>
+<div><span class="mono">Drawn by</span><b>K. Tajudeen</b></div>
+<div><span class="mono">Scale</span><b>NTS</b></div>
+<div><span class="mono">Sheet</span><b>12 / 12</b></div>
+<div><span class="mono">Status</span><b>Issued</b></div></div></div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <span class="mono">Kolawole Tajudeen &middot; British Columbia, Canada</span>
+    <div class="foot-soc"><a href="https://www.linkedin.com/in/bamtak/">LinkedIn</a> <a href="https://github.com/bamtak">GitHub</a> <a href="https://x.com/bamtak_">X</a> <a href="https://www.kaggle.com/bamtak">Kaggle</a></div>
+    <span class="mono">Rev. November 2026</span>
+  </div>
+</footer>
+</div>
+<script>
+    (function () {
+      var NAME = 'Kolawole Tajudeen';
+      var views = Array.prototype.slice.call(document.querySelectorAll('.view'));
+      var projects = ['noovera', 'farmpro', 'omnienergy', 'watthouse', 'buildlink', 'arrivox', 'clinical'];
+      var first = true;
+      function route() {
+        var h = (location.hash || '').replace('#', '') || 'home';
+        var v = views.filter(function (x) { return x.getAttribute('data-view') === h; })[0];
+        if (!v) { v = views[0]; h = 'home'; }
+        views.forEach(function (x) {
+          var on = x === v;
+          x.hidden = !on;
+        });
+        var section = projects.indexOf(h) >= 0 ? 'work' : h;
+        Array.prototype.forEach.call(document.querySelectorAll('[data-nav]'), function (a) {
+          if (a.getAttribute('data-nav') === section) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+        });
+        var t = v.getAttribute('data-title');
+        document.title = (h === 'home') ? NAME : (t + ' | ' + NAME);
+        if (!first) {
+          window.scrollTo(0, 0);
+          var hd = v.querySelector('h1');
+          if (hd) { hd.setAttribute('tabindex', '-1'); try { hd.focus({ preventScroll: true }); } catch (e) {} }
+        }
+        first = false;
+      }
+      window.addEventListener('hashchange', route);
+      route();
+
+      var zones = [{ id: 'lag', tz: 'Africa/Lagos' }, { id: 'bc', tz: 'America/Vancouver' }];
+      function tick() {
+        var now = new Date();
+        zones.forEach(function (z) {
+          try {
+            var t = new Intl.DateTimeFormat('en-GB', { timeZone: z.tz, hour: '2-digit', minute: '2-digit', hour12: false }).format(now);
+            var hr = parseInt(t.slice(0, 2), 10);
+            var off = new Intl.DateTimeFormat('en', { timeZone: z.tz, timeZoneName: 'shortOffset' }).formatToParts(now).filter(function (p) { return p.type === 'timeZoneName'; })[0];
+            var working = hr >= 9 && hr < 17;
+            document.getElementById('clk-' + z.id).textContent = t;
+            document.getElementById('st-' + z.id).textContent = working ? 'Working hours' : 'Off hours';
+            document.getElementById('dot-' + z.id).className = 'dot' + (working ? ' on' : '');
+            if (off) document.getElementById('off-' + z.id).textContent = off.value.replace('GMT', 'UTC').replace('-', '\u2212');
+          } catch (e) {}
+        });
+      }
+      tick();
+      setInterval(tick, 20000);
+    })();
+    </script>
+</body>
+</html>

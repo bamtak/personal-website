@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "tajudeenkolawole-com",
+  "account_id": "d4f70e88d8f506b105d0ef39e81b77da",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public"
+  },
+  "routes": [
+    { "pattern": "tajudeenkolawole.com", "custom_domain": true },
+    { "pattern": "www.tajudeenkolawole.com", "custom_domain": true }
+  ],
+  "observability": { "enabled": true }
+}

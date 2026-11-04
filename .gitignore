@@ -1,0 +1,8 @@
+.DS_Store
+.wrangler/
+.cloudflare/
+_previous/
+node_modules/
+.env
+.env.*
+*.log
